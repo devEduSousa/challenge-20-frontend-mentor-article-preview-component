@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(210, 46%, 95%);
+}
+
+.opacity {
+    display: flex !important;
+    opacity: 1 !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.new-icon-bg {
+    background-color: hsl(212, 23%, 69%) !important;
+}
+
+.color-white {
+    background-color: hsl(210, 46%, 95%) !important;
+    transition: background-color 1s ease-in-out;
+}
+
+.pointer-events {
+    pointer-events: auto !important;
+}
+
+#container {
+    width: 280px;
+    margin: 50px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.hero {
+    background-image: url("../images/drawers.jpg");
+    background-size: cover;
+    height: 220px;
+    border-radius: 10px 10px 0 0;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 12px 20px;
+}
+
+.description .tip-1 {
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+    line-height: 25px;
+}
+
+.description .tip-2 {
+    color: hsl(214, 17%, 51%);
+    font-weight: 500;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.description .author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.description .author .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+
+.description .author .user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    flex: 1;
+    font-size: 13px;
+    margin-left: 15px;
+}
+
+.description .author .user .name {
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+}
+
+.description .author .user .date{
+    color: hsl(214, 17%, 51%);
+    font-weight: 500;
+}
+
+.description .author .icon-bg {
+    cursor: pointer;
+    background-color: hsl(210, 46%, 95%);
+    padding: 18px;
+    border-radius: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.description .author .icon {
+    mask-image: url("../images/icon-share.svg");
+    mask-repeat: no-repeat;
+    background-size: 15px;
+    mask-position: center;
+    background-color: hsl(217, 19%, 35%);
+    transition: background-color 1s ease-in-out;
+}
+
+.description .author .icon {
+    width: 15px;
+    height: 11px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.contacts {
+    background-color: #48556a;
+    position: absolute;
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    align-items: center;
+    width: 100%;
+    bottom: 0;
+    border-radius: 0 0 10px 10px;
+    height: 80px;
+}
+
+.contacts span {
+    margin-left: 12px;
+    text-transform: uppercase;
+    color: hsl(210, 46%, 95%);
+    letter-spacing: 5px;
+    font-size: 13px;
+}
+
+.contacts .social-media {
+    margin-left: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.contacts .social-media a {
+    display: flex;
+    pointer-events: none;
+}
+
+.contacts .square {
+    display: none;
+    width: 20px;
+    height: 20px;
+    rotate: 45deg;
+    background-color: #48556a;
+    position: absolute;
+    bottom: -10px;
+    right: 70px;
+}
+
+@media(min-width: 375px) {
+    #container {
+        width: 335px;
+    }
+
+    .description {
+        padding: 40px 39px 20px;
+    }
+
+    .contacts span {
+        margin-left: 39px;
+    }
+}
+
+@media(min-width: 768px) {
+    #container {
+        flex-direction: row;
+        width: 700px;
+        height: 300px;
+    }
+    
+    .hero {
+        width: 1000px;
+        height: 300px;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .description .tip-2 {
+        margin-bottom: 0;
+    }
+
+    .contacts {
+        width: 250px;
+        height: 50px;
+        right: -25px;
+        bottom: 100px;
+        border-radius: 10px;
+    }
+
+    .contacts .square {
+        display: block;
+    }
+}
+
+@media(min-width: 1024px) {
+    .contacts {
+        right: -70px;
+    }
+
+    .contacts .square {
+        right: 115px;
+    }
+}
